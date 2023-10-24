@@ -1,0 +1,39 @@
+
+#     for subchild in child:
+#         feeddata=subchild.tag +" "+ str(subchild.text)
+#         # print(feeddata)
+#         feeds.append(feeddata)
+#         for likeDislike in child.find('likeDislike'):
+#             likedata=likeDislike.tag +" "+ str(likeDislike.text)
+#             like.append(likedata)
+#         for multimedia in child.find('multiMedia'):
+#             multidata=str(multimedia.tag) +" "+ str(multimedia.text)
+#             multi.append(multidata)
+# for i in feeds:
+#     n=i.split(' ')
+#     feedscol.append(n[0])
+#     feedsvalue.append(n[1])
+# feedsvaluelist=[feedsvalue]
+# feedsdataframe=pd.DataFrame(feedsvalue)
+# print(feedsdataframe)
+#
+#
+# for i in like:
+#     n=i.split(' ')
+#     likecol.append(n[0])
+#     likevalue.append(n[1])
+# likevaluelist=[likevalue]
+# likedataframe=pd.DataFrame(likevaluelist, columns=likecol)
+# # print(likedataframe)
+#
+#
+# for i in multi:
+#     n=i.split(' ')
+#     multicol.append(n[0])
+#     multivalue.append(n[1])
+# multivaluelist=[multivalue]
+# multimediadataframe=pd.DataFrame(multivaluelist, columns=multicol)
+# # print(multimediadataframe)
+#
+# joineddataframe=pd.concat([feedsdataframe, likedataframe, multimediadataframe], axis=1)
+# # print(joineddataframe)

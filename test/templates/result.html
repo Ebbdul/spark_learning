@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    function reloadPage() {
+        location.reload();
+    }
+
+    var source = new EventSource("/listen");
+
+    source.onopen = function() {
+        reloadPage();
+    };
+
+    source.onerror = function() {
+        reloadPage();
+    };
+
+    source.onmessage = function(event) {
+        reloadPage();
+    };
+});
+
+    </script>
+</head>
+<body>
+    <h1>Results:</h1>
+    <p>{{ dt }}</p>
+    <p>{{ car_rt }}</p>
+    <p>{{ car_dis }}</p>
+    <p>{{ car_dur }}</p>
+    <p>{{ bus_dis }}</p>
+    <p>{{ bus_dur }}</p>
+    <p>{{ walk_rt }}</p>
+    <p>{{ walk_dis }}</p>
+    <p>{{ walk_dur }}</p>
+</body>
+</html>
