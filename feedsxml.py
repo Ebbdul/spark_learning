@@ -101,12 +101,6 @@ record="samplefeeds"
 like="tablelike"
 multi="tablemulti"
 feedtable="tablefeeds"
-# sparkDFcomplete.write \
-#   .format("jdbc") \
-#   .mode("overwrite").option("url", "jdbc:sqlserver://192.168.2.49;databaseName=test-db-wasay;") \
-#   .option("dbtable", feedtable) \
-#   .option("user", "sa") \
-#   .option("password", "Red*St0ne") \
-#   .save()
+
 
 
