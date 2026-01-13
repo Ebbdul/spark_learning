@@ -5,7 +5,7 @@ from pyspark import SparkConf
 
 conf = SparkConf().setAll(pairs=[("spark.jars","C:/Spark/jars/postgresql-42.5.2"), ("spark.jars.packages","org.postgresql:postgresql-42.5.2")])
 spark = SparkSession.builder.appName('readDB').getOrCreate()
-url = "jdbc:postgresql://192.168.2.49:5432/HMS_source"
+url = "jdbc:postgresql://hsot:port/database"
 table='"EDW".booking_fact'
 driver="org.postgresql.Driver"
 user="postgres"
