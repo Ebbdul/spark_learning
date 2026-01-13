@@ -87,14 +87,6 @@ print(df.show())
 # df2=df.withColumn("multiMedia",concat_ws(",",col("multiMedia")))
 # print(df2.show())
 
-# # writing to postgress database
-# url = "jdbc:postgresql://192.168.2.49:5432/HMS_source"
-# table="testxmlData"
-# driver="org.postgresql.Driver"
-# user="postgres"
-# password="Red*St0ne"
-# df.write.format('jdbc').option("driver", driver).option("url",url).option("dbtable",table).option("user",user).option("password",password).save()
-
 
 
 
@@ -107,11 +99,3 @@ tablexml="proteinxml"
 tablebook="bookxml"
 iris="irisdata"
 record="record500"
-#
-# a.write \
-#   .format("jdbc") \
-#   .mode("overwrite").option("url", "jdbc:sqlserver://192.168.2.49;databaseName=test-db-wasay;") \
-#   .option("dbtable", record) \
-#   .option("user", "sa") \
-#   .option("password", "Red*St0ne") \
-#   .save()
