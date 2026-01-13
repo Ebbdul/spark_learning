@@ -8,8 +8,8 @@ spark = SparkSession.builder.appName('readDB').getOrCreate()
 url = "jdbc:postgresql://hsot:port/database"
 table='"EDW".booking_fact'
 driver="org.postgresql.Driver"
-user="postgres"
-password="Red*St0ne"
+user="user"
+password="password"
 query='select count(1), nbook_id_bk from "EDW".booking_fact group by nbook_id_bk'
 
 
