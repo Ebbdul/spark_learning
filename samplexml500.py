@@ -97,11 +97,3 @@ merged_dataframe=multi_dataframe.join(likedf, col("id1")==col("id2"), "full" ).d
 # print(merged_dataframe.show(n=700))
 merged_dataframe=merged_dataframe.na.fill("0", ["likes"]).na.fill("1", ["dislikes"]).na.fill("2", "userAction")
 print(merged_dataframe.show(n=1000))
-
-# merged_dataframe.write \
-#   .format("jdbc") \
-#   .mode("overwrite").option("url", "jdbc:sqlserver://192.168.2.49;databaseName=test-db-wasay;") \
-#   .option("dbtable", 'mergedDataframe') \
-#   .option("user", "sa") \
-#   .option("password", "Red*St0ne") \
-#   .save()
