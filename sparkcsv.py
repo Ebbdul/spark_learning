@@ -28,11 +28,11 @@ print(df.show()) # print dataframe
 
 
 # writing to database
-url = "jdbc:postgresql://192.168.2.49:5432/HMS_source"
+url = "jdbc:postgresql://host:port/database"
 table="employeeData"
 driver="org.postgresql.Driver"
-user="postgres"
-password="Red*St0ne"
+user="user"
+password="password"
 # add   .mode("append") \ if you want to write in existing table
 df.write.format('jdbc').option("driver", driver).option("url",url).option("dbtable",table).option("user",user).option("password",password).save()
 
