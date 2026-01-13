@@ -114,10 +114,10 @@ def load(n,t):
     try:
         n.write \
             .format("jdbc") \
-            .mode("overwrite").option("url", "jdbc:sqlserver://192.168.2.49;databaseName=test-db-wasay;") \
+            .mode("overwrite").option("url", "jdbc:sqlserver://host;databaseName=databaseName;") \
             .option("dbtable", t) \
-            .option("user", "sa") \
-            .option("password", "Red*St0ne") \
+            .option("user", "user") \
+            .option("password", "password") \
             .save()
 
     except Exception as e:
